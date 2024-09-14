@@ -2,6 +2,7 @@ import {app, Menu, nativeImage, Tray, type WebContents} from "electron";
 import icon from "../../resources/placeholderTrayIcon.png?asset";
 
 export function startTray(pageData: WebContents) {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
     const tray = new Tray(icon as string);
     tray.setToolTip("Acorn");
     tray.setContextMenu(

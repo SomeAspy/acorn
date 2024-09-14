@@ -5,5 +5,5 @@ try {
         await webFrame.executeJavaScript(shelter);
     });
 } catch (error) {
-    console.error(error)
+    console.error(error);
 }

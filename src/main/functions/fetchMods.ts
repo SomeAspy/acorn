@@ -1,6 +1,7 @@
 import {app} from "electron";
 import {writeFileSync} from "fs";
 import {join} from "path";
+import {getConfig} from "../../shared/config.js";
 
 async function fetchMod(fileName: string, url: string) {
     try {
@@ -21,4 +22,10 @@ async function fetchMod(fileName: string, url: string) {
 export async function fetchMods() {
     console.log("[FetchMods]: Fetching Shelter");
     await fetchMod("shelter.js", "https://raw.githubusercontent.com/uwu/shelter-builds/main/shelter.js");
+
+    if (getConfig("mods").includes("vencord")) {
+        console.log("[FetchMods]: Fetching Vencord");
+        await fetchMod("vencord.js", "https://github.com/Vendicated/Vencord/releases/download/devbuild/browser.js");
+        await fetchMod("vencord.css", "https://github.com/Vendicated/Vencord/releases/download/devbuild/browser.css");
+    }
 }
