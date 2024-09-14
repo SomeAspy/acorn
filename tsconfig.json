@@ -18,6 +18,9 @@
             "ESNext",
             "DOM"
         ],
+        "types": [
+            "electron-vite/node"
+        ],
         "target": "ESNext",
     },
     "include": [

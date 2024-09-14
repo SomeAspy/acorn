@@ -4,4 +4,5 @@ export interface Config {
     multiInstance: boolean;
     mods: "vencord"[];
     autoHideMenuBar: boolean;
+    tray: boolean;
 }

@@ -1,6 +1,6 @@
 import {BrowserWindow} from "electron";
 import {getConfig} from "../../shared/config.js";
-import { join } from "path";
+import {join} from "path";
 
 export async function createDiscordWindow() {
     const window = new BrowserWindow({
@@ -19,7 +19,7 @@ export async function createDiscordWindow() {
         await window.loadURL(`https://${getConfig("channel")}.discord.com/app`);
     }
 
-    //!SECTION Block Analytics
+    //SECTION - Block Analytics
     window.webContents.session.webRequest.onBeforeRequest(
         {
             urls: [
@@ -33,4 +33,5 @@ export async function createDiscordWindow() {
             callback({cancel: true});
         }
     );
+    return window;
 }

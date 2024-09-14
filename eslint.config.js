@@ -17,6 +17,7 @@ export default tseslint.config(
         },
         rules: {
             "no-constant-binary-expression": 0,
+            "@typescript-eslint/no-non-null-assertion": 0,
             "@typescript-eslint/no-unused-vars": [
                 2,
                 {
