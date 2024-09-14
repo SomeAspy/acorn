@@ -1,0 +1,25 @@
+{
+    "name": "acorn",
+    "type": "module",
+    "version": "0.0.0",
+    "scripts": {
+        "start": "electron-vite preview -- --ozone-platform-hint=auto",
+        "dev": "electron-vite dev -- --ozone-platform-hint=auto",
+        "prebuild": "electron-vite build",
+        "lint": "eslint"
+    },
+    "main": "./out/main/main.js",
+    "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
+    "devDependencies": {
+        "@eslint/js": "^9.10.0",
+        "@types/node": "^22.5.5",
+        "electron": "^32.1.0",
+        "electron-builder": "^25.0.5",
+        "electron-vite": "^2.3.0",
+        "eslint": "^9.10.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.2",
+        "typescript-eslint": "^8.5.0"
+    }
+}
