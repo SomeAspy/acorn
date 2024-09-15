@@ -10,7 +10,6 @@ function makeConfig() {
         channel: "stable",
         multiInstance: false,
         mods: ["vencord"],
-        autoHideMenuBar: true,
         tray: true
     } as Config;
     writeFileSync(configLocation, JSON.stringify(config, null, 2), {encoding: "utf8", flag: "w"});

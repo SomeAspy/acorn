@@ -2,6 +2,7 @@ import {app, Menu, nativeImage, Tray, type WebContents} from "electron";
 import icon from "../../resources/placeholderTrayIcon.png?asset";
 
 export function startTray(pageData: WebContents) {
+    // Strange ESLint and TSC fighting here
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
     const tray = new Tray(icon as string);
     tray.setToolTip("Acorn");
@@ -17,9 +18,13 @@ export function startTray(pageData: WebContents) {
     );
     pageData.on("page-favicon-updated", (_, favicons) => {
         try {
-            tray.setImage(nativeImage.createFromDataURL(favicons[0]!));
+            let favicon = nativeImage.createFromDataURL(favicons[0]!);
+            if (process.platform === "win32") {
+                favicon = favicon.resize({height: 32}); // Windows scaling disaster
+            }
+            tray.setImage(favicon);
         } catch {
-            return; // NOTE - Discord will send a URL before fully loaded
+            return; // Discord will send a URL before fully loaded
         }
     });
 }

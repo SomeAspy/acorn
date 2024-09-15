@@ -1,3 +1,4 @@
+// @ts-check
 import { defineConfig } from "electron-vite";
 
 export default defineConfig(() => {
@@ -10,9 +11,6 @@ export default defineConfig(() => {
                     entry: "src/preload/preload.mts",
                 }
             }
-        },
-        renderer: {
-
         }
     }
 })

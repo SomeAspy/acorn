@@ -3,6 +3,5 @@ export interface Config {
     channel: "stable" | "ptb" | "canary";
     multiInstance: boolean;
     mods: "vencord"[];
-    autoHideMenuBar: boolean;
     tray: boolean;
 }

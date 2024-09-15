@@ -9,7 +9,7 @@ export async function createDiscordWindow() {
             preload: join(import.meta.dirname, "../preload/preload.mjs"),
             nodeIntegration: true
         },
-        autoHideMenuBar: getConfig("autoHideMenuBar")
+        autoHideMenuBar: true
     });
 
     const channel = getConfig("channel");
