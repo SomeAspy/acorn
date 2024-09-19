@@ -2,9 +2,9 @@ import { app } from "electron";
 import { createDiscordWindow } from "./discord/discordWindow.js";
 import "./startup.js";
 import "./ipc.js";
+import { getConfig } from "../shared/config.js";
 import { fetchMods } from "./functions/fetchMods.js";
 import { startTray } from "./tray.js";
-import { getConfig } from "../shared/config.js";
 
 await fetchMods();
 

@@ -1,4 +1,4 @@
-import { app, Menu, nativeImage, Tray, type WebContents } from "electron";
+import { Menu, Tray, type WebContents, app, nativeImage } from "electron";
 import icon from "../../resources/placeholderTrayIcon.png?asset";
 
 export function startTray(pageData: WebContents) {

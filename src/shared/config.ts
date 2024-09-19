@@ -1,6 +1,6 @@
+import { readFileSync, writeFileSync } from "node:fs";
 import { app } from "electron";
 import type { Config } from "../@types/config.js";
-import { readFileSync, writeFileSync } from "node:fs";
 
 const configLocation = `${app.getPath("userData")}/config.json`;
 

@@ -1,7 +1,7 @@
-import { BrowserWindow } from "electron";
-import { getConfig } from "../../shared/config.js";
 import { join } from "node:path";
 import RPCServer from "arrpc";
+import { BrowserWindow } from "electron";
+import { getConfig } from "../../shared/config.js";
 
 export async function createDiscordWindow() {
 	const window = new BrowserWindow({

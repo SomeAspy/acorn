@@ -1,6 +1,6 @@
-import { app } from "electron";
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { app } from "electron";
 import { getConfig } from "../../shared/config.js";
 
 async function fetchMod(fileName: string, url: string) {

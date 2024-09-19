@@ -1,6 +1,6 @@
-import { app, ipcMain } from "electron";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { app, ipcMain } from "electron";
 import { getConfig } from "../shared/config.js";
 
 ipcMain.handle("getShelter", () => {
