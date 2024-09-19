@@ -1,0 +1,10 @@
+{
+	"[*]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"cSpell.words": ["arrpc"],
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	  }
+}

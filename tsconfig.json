@@ -1,34 +1,23 @@
 {
-    "compilerOptions": {
-        "exactOptionalPropertyTypes": true,
-        "noImplicitOverride": true,
-        "noImplicitReturns": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noUncheckedIndexedAccess": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "strict": true,
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
-        "resolveJsonModule": true,
-        "rootDir": "src",
-        "outDir": "out",
-        "removeComments": true,
-        "lib": [
-            "ESNext",
-            "DOM"
-        ],
-        "types": [
-            "electron-vite/node"
-        ],
-        "target": "ESNext",
-    },
-    "include": [
-        "src/**/*",
-        "*.config.js",
-    ],
-    "exclude": [
-        "node_modules",
-        "out"
-    ]
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"resolveJsonModule": true,
+		"rootDir": "src",
+		"outDir": "dist",
+		"removeComments": true,
+		"lib": ["ESNext", "DOM"],
+		"types": ["electron-vite/node"],
+		"target": "ESNext"
+	},
+	"include": ["src/**/*", "electron.vite.config.ts"],
+	"exclude": ["node_modules", "dist", "electron.vite.config.ts"]
 }
