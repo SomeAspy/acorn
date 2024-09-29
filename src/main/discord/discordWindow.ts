@@ -2,6 +2,7 @@ import { join } from "node:path";
 import RPCServer from "arrpc";
 import { BrowserWindow } from "electron";
 import { getConfig } from "../../shared/config.js";
+import { BrowserUserAgent } from "../constants.js";
 
 export async function createDiscordWindow() {
 	const window = new BrowserWindow({
@@ -12,6 +13,9 @@ export async function createDiscordWindow() {
 		},
 		autoHideMenuBar: true,
 	});
+
+	//NOTE - Weird parts of discord will fail without magic user agents
+	window.webContents.setUserAgent(BrowserUserAgent);
 
 	const channel = getConfig("channel");
 	if (channel === "stable") {
